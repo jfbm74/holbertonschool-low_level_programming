@@ -9,7 +9,7 @@
 int main(void)
 {
 	int n;
-	unsigned int lastone;
+	int lastone;
 
 	/*Generating a random number*/
 	srand(time(0));
@@ -22,7 +22,7 @@ int main(void)
 	} else if (lastone == 0)
 	{
 		printf("Last digit of %d is %d and is 0\n", n, lastone);
-	} else if (lastone < 6)
+	} else if (lastone < 6 && lastone !=0)
 	{
 		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, lastone);
 	}
