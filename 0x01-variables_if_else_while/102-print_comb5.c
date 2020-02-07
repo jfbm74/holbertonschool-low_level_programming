@@ -19,15 +19,15 @@ int main(void)
 		{
 			for (k = i ; k <= '9' ; k++)
 			{
-				for (l = j + 1 ; l<= '9' ; l++)
+				for (l = j + 1 ; l <= '9' ; l++)
 				{
-						putchar(i);
-						putchar(j);
-						putchar(' ');
-						putchar(k);
-						putchar(l);
-						putchar(',');
-						putchar(' ');
+					putchar(i);
+					putchar(j);
+					putchar(' ');
+					putchar(k);
+					putchar(l);
+					putchar(',');
+					putchar(' ');
 				}
 			}
 		}
