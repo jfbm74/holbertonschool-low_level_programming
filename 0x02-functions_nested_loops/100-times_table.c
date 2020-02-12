@@ -2,7 +2,6 @@
 /**
 * print_times_table - prints mult tables
 * @n  : the integer to print the times tables
-* Return: Null
 */
 void print_times_table(int n)
 {
@@ -42,7 +41,7 @@ void print_times_table(int n)
 					_putchar(',');
 					_putchar(' ');
 					_putchar((result / 100) + '0');
-					_putchar(((result - 100) / 10) + '0');
+					_putchar(((result / 100) % 10) + '0');
 					_putchar((result % 10) + '0');
 				}
 			}
