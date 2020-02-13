@@ -2,7 +2,8 @@
 
 /**
 * mul - return product of two integers
-* @c: given value
+* @a : first number
+* @b : Second number
 * Return: product
 */
 int mul(int a, int b)
