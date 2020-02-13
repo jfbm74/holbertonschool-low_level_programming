@@ -2,7 +2,7 @@
 
 /**
 * print_square - Print a square of n length
-* @n: Length of line
+* @size: Length of square
 *
 * Return: Nothing
 */
