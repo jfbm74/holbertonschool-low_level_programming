@@ -3,8 +3,7 @@
 /**
 * print_line - print a line with n characters long
 *
-* @i: print character _  loops
-* Return: product
+* @n : times long line
 */
 void print_line(int n)
 {
