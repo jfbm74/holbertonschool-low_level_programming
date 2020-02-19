@@ -12,7 +12,8 @@ void rev_string(char *s)
 	int j;
 
 	/* Length of string s*/
-	for  (i = 0; s[i] != 0 ; i++);
+	for  (i = 0; s[i] != 0 ; i++)
+		;
 	i--;
 	/* Swaping values of s*/
 	for (j = 0 ; j < i ; j++, i--)
