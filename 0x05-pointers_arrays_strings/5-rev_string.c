@@ -1,3 +1,10 @@
+/**
+* rev_string - Print a string in rev
+* @s: String to print
+*
+* Return: nothing
+*/
+
 void rev_string(char *s)
 {
 	int len;
