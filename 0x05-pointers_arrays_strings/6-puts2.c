@@ -1,9 +1,10 @@
 #include "holberton.h"
-/*
- * puts2 - program that prints every other char of a string
- * eliminar libreria stdio
- * @str: given string
- */
+/**
+  * puts2 - Print a string in rev
+  * @str: String to print
+  *
+  * Return: nothing
+  */
 void puts2(char *str)
 {
 	int j;
