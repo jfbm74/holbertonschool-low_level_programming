@@ -1,3 +1,5 @@
+#include "holberton.h"
+#include <stdio.h>
 /**
  * _strcmp - Compare two strings, output int based on comparison
  * @s1: First string to compare
@@ -15,20 +17,13 @@ int _strcmp(char *s1, char *s2)
 	for (j = 0; s2[j] != '\0'; j++)
 		;
 
-	while (s2[j] != '\0')
-	{
-		j++;
-	}
-	while (s1[k] != '\0' || s2[k] != '\0')
+	while (s1[k] != '\0' && s2[k] != '\0')
 	{
 		if (s1[k] != s2[k])
 		{
 			return (s1[k] - s2[k]);
 		}
-		else
-		{
-			return (0);
-		}
+		k++;
 	}
 	return (0);
 }
