@@ -1,18 +1,18 @@
 /**
- * string_toupper - Convert all lowercase letters to uppercase
- * @s: String to capitalize
- *
- * Return: Pointer to string;
+  * string_toupper - Returns given string to uppercase
+  * @c: given string
+  * Return: uppercase string
  */
-char *string_toupper(char *s)
+char *string_toupper(char *c)
 {
-	int i = 0;
+	int i;
 
-	while (s[i] != 0)
+	i = 0;
+	while (c[i] != '\0')
 	{
-		if (s[i] >= 'a' && s[i] <= 'z')
-			s[i] -= 32;
+		if (c[i] >= 97 && c[i] <= 122)
+			c[i] = c[i] - 32;
 		i++;
 	}
-	return (s);
+	return (c);
 }
