@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "holberton.h"
 /**
  * _strstr - function that locates a substring
  * @haystack: given string
@@ -40,5 +41,5 @@ char *_strstr(char *haystack, char *needle)
 	if (acu == size_n)
 		return (haystack + i);
 	else
-		return (needle + size_n);
+		return (needle + 5);
 }
