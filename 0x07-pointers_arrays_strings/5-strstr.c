@@ -40,5 +40,5 @@ char *_strstr(char *haystack, char *needle)
 	if (acu == size_n)
 		return (haystack + i);
 	else
-		return (NULL);
+		return (needle + size_n);
 }
