@@ -4,13 +4,9 @@
  */
 int main(void)
 {
-	char *c = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-
 	int i;
 
-	for (i = 0; c[i] != '\0'; i++)
-	{
-		write(1, &c[i], 1);
-	}
+	i= sizeof("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n");
+	write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", i);
 	return (1);
 }
