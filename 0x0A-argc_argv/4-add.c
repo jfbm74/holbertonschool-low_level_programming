@@ -24,8 +24,8 @@ int main(int argc __attribute__((unused)), char **argv)
 		}
 		else if ((j = atoi(argv[i])) < 0)
 		{
-			printf("Error\n");
-			return (EXIT_FAILURE);
+			printf("0\n");
+			return (EXIT_SUCCESS);
 		}
 		else
 		{
