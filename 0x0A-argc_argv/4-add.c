@@ -16,7 +16,7 @@ int main(int argc __attribute__((unused)), char **argv)
 	k = argc;
 	for (i = 1; i < k ; i++)
 	{
-	if (!atoi(argv[i]))
+		if (!atoi(argv[i]))
 		{
 			printf("Error\n");
 			return (EXIT_FAILURE);
