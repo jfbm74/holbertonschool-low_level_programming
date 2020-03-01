@@ -11,12 +11,18 @@ int main(int argc __attribute__((unused)), char **argv)
 	unsigned long i;
 	unsigned long k;
 	int sum;
+	int j;
 
-	sum = 0;
+	sum = j = 0;
 	k = argc;
 	for (i = 1; i < k ; i++)
 	{
 		if (!atoi(argv[i]))
+		{
+			printf("Error\n");
+			return (EXIT_FAILURE);
+		}
+		else if ((j = atoi(argv[i])) < 0)
 		{
 			printf("Error\n");
 			return (EXIT_FAILURE);
