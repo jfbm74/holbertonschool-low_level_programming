@@ -22,11 +22,6 @@ int main(int argc __attribute__((unused)), char **argv)
 			printf("Error\n");
 			return (EXIT_FAILURE);
 		}
-		else if ((j = atoi(argv[i])) < 0)
-		{
-			printf("0\n");
-			return (EXIT_SUCCESS);
-		}
 		else
 		{
 			sum = sum + atoi(argv[i]);
