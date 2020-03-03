@@ -20,6 +20,7 @@ char *_strdup(char *str)
 		s_str++;
 		i++;
 	}
+	s_str++;
 	copy = malloc(s_str * sizeof(char));
 	if (copy == NULL)
 	{
@@ -28,12 +29,13 @@ char *_strdup(char *str)
 	else
 	{
 		i = 0;
-		while (i <= s_str + 1)
+		while (i < s_str)
 		{
 			copy[i] = str[i];
 			i++;
 		}
 	}
+	copy[i] = '\0';
 	return (copy);
 	free(copy);
 }
