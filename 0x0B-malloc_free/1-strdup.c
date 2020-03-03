@@ -28,13 +28,12 @@ char *_strdup(char *str)
 	else
 	{
 		i = 0;
-		while (i <= s_str)
+		while (i <= s_str + 1)
 		{
 			copy[i] = str[i];
 			i++;
 		}
 	}
-	copy[i +1] = '\0';
 	return (copy);
 	free(copy);
 }
