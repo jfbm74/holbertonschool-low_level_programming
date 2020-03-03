@@ -23,7 +23,7 @@ char *_strdup(char *str)
 	copy = malloc(s_str * sizeof(char));
 	if (copy == NULL)
 	{
-		exit(EXIT_FAILURE);
+		return (NULL);
 	}
 	else
 	{
