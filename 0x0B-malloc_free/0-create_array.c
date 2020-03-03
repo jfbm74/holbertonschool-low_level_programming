@@ -1,10 +1,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * create_array - function that creates an array of chars, and initializes it with a specific char.
- * @size: 
- * @c:
- * Return: 
+ * create_array - creates an array of chars, and initializes with char.
+ * @size: size of array
+ * @c: char to fill array
+ * Return: array
  */
 char *create_array(unsigned int size, char c)
 {
@@ -16,11 +16,12 @@ char *create_array(unsigned int size, char c)
 	if (a == NULL)
 	{
 		fprintf(stderr, "Error: Not enough memory left\n");
-		exit (EXIT_FAILURE);
+		exit(EXIT_FAILURE);
 	}
 	for (i = 0; i < size; i++)
 	{
 		a[i] = c;
 	}
 	return (a);
+	free(a);
 }
