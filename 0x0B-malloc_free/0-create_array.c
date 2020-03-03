@@ -11,17 +11,23 @@ char *create_array(unsigned int size, char c)
 	unsigned int i;
 	char *a;
 
-
-	a = malloc(size * sizeof(char));
-	if (a == NULL)
+	if (size == 0)
 	{
-		fprintf(stderr, "Error: Not enough memory left\n");
-		exit(EXIT_FAILURE);
+		return (NULL);
 	}
-	for (i = 0; i < size; i++)
+	else
 	{
-		a[i] = c;
+		a = malloc(size * sizeof(char));
+		if (a == NULL)
+		{
+			fprintf(stderr, "Error: Not enough memory left\n");
+			exit(EXIT_FAILURE);
+		}
+		for (i = 0; i < size; i++)
+		{
+			a[i] = c;
+		}
+		return (a);
+		free(a);
 	}
-	return (a);
-	free(a);
 }
