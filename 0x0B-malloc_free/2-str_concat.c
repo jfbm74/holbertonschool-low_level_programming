@@ -22,7 +22,9 @@ char *str_concat(char *s1, char *s2)
 		s_s2++;
 	}
 	else
+	{
 		return (NULL);
+	}
 	/* creating array dest */
 	dest =  malloc((s_s1 + s_s2) * sizeof(char));
 	if (!dest)
