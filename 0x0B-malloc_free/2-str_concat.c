@@ -12,7 +12,6 @@ char *str_concat(char *s1, char *s2)
 	int s_s2 = 0;
 	char *dest;
 
-	/**size of  s1,s2*/
 	if (s1)
 	{
 		for (s_s1 = 0; s1[s_s1] != '\0'; s_s1++)
@@ -26,7 +25,6 @@ char *str_concat(char *s1, char *s2)
 	}
 	else
 		return (NULL);
-	/* creating array dest */
 	dest =  malloc((s_s1 + s_s2) * sizeof(char));
 	if (!dest)
 	{
@@ -34,7 +32,6 @@ char *str_concat(char *s1, char *s2)
 	}
 	else
 	{
-		/*concatenating strings s1,s2 into dest*/
 		for (i = 0; i < (s_s1 + s_s2); i++)
 		{
 			if (i < s_s1)
