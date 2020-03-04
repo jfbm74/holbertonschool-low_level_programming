@@ -8,8 +8,8 @@
 char *str_concat(char *s1, char *s2)
 {
 	int i;
-	int s_s1;
-	int s_s2;
+	int s_s1 = 0;
+	int s_s2 = 0;
 	char *dest;
 
 	/**size of  s1,s2*/
