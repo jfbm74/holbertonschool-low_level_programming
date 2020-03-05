@@ -16,7 +16,6 @@ int *array_range(int min, int max)
 		return (NULL);
 	for (i = min; i < max ; i++)
 		len++;
-	printf("len= %d\n", len);
 	ar = malloc((len * sizeof(int) + 1));
 	if (ar == NULL)
 		return (NULL);
