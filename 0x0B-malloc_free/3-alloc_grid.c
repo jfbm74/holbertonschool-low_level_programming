@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include "holberton.h"
 /**
  * *alloc_grid - Returns a ptr to a 2 dime array of integers.
  * @width: array cols
@@ -11,7 +12,9 @@ int **alloc_grid(int width, int height)
 	int i, j;
 
 	if (width <= 0 || height <= 0)
+	{
 		return (NULL);
+	}
 	ar = malloc(height * sizeof(int *));
 	if (ar ==  NULL)
 		return (NULL);
