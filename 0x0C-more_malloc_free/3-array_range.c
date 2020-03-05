@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <stdio.h>
 /**
  * array_range - Function that creates an array of integers.
  * @min: number to start in array
