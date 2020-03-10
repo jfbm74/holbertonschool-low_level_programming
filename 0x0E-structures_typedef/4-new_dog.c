@@ -12,6 +12,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog_t *copito;
 	int lname;
 	int lowner;
+	int i;
 
 	for (lname = 0; name[lname] != '\0'; lname++)
 		;
@@ -34,8 +35,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(copito);
 		return (NULL);
 	}
-	copito->name = name;
-	copito->owner = owner;
+	for (i = 0; i < lname + 1; i++)
+		copito->name[i] = name[i];
+	copito->name[i] = '\0';
+	for (i = 0; i < lowner + 1; i++)
+		copito->owner[i] = owner[i];
+	copito->owner[i] = '\0';
 	copito->age = age;
 	return (copito);
 }
