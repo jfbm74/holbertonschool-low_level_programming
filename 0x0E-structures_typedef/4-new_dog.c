@@ -10,8 +10,9 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *copito;
-	int lname, lowner;
-	
+	int lname;
+	int lowner;
+
 	for (lname = 0; name[lname] != '\0'; lname++)
 		;
 	for (lowner = 0; name[lowner] != '\0'; lowner++)
