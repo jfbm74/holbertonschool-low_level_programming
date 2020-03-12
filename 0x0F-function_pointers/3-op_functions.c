@@ -1,63 +1,56 @@
 #include "3-calc.h"
-#include <stdlib.h>
 #include <stdio.h>
 /**
- * op_add - Function that adds 2 integers
- * @a: first integer
- * @b: second integer
- * Return: result
-*/
+ * op_add - add function
+ * @a: int type
+ * @b: int type
+ * Return: sum of two int
+ */
 int op_add(int a, int b)
 {
 	return (a + b);
 }
+
 /**
- * op_sub - Function that subs 2 integers
- * @a: first integer
- * @b: second integer
- * Return: result
-*/
+ * op_sub - substract function
+ * @a: int type
+ * @b: int type
+ * Return: subtract two ints
+ */
 int op_sub(int a, int b)
 {
 	return (a - b);
 }
+
 /**
- * op_mul - Function that multip 2 integers
- * @a: first integer
- * @b: second integer
- * Return: result
-*/
+ * op_mul - multiply function
+ * @a: int type
+ * @b: int type
+ * Return: multiply two ints
+ */
 int op_mul(int a, int b)
 {
 	return (a * b);
 }
+
 /**
- * op_div - Function that divide 2 integers
- * @a: first integer
- * @b: second integer
- * Return: result
-*/
+ * op_div - divide two ints
+ * @a: int type
+ * @b: int type
+ * Return: divide two ints
+ */
 int op_div(int a, int b)
 {
-	if (b == 0)
-	{
-		printf("Error");
-		exit(100);
-	}
 	return (a / b);
 }
+
 /**
- * op_mod - a integer mod int b
- * @a: first integer
- * @b: second integer
- * Return: result
-*/
+ * op_mod - modulos of two ints
+ * @a: int type
+ * @b: int type
+ * Return: modulus of two ints
+ */
 int op_mod(int a, int b)
 {
-	if (b == 0)
-	{
-		printf("Error");
-		exit(100);
-	}
 	return (a % b);
 }

@@ -1,12 +1,13 @@
-#include <string.h>
-#include <stdlib.h>
-#include <stdio.h>
 #include "3-calc.h"
+#include <stdio.h>
+
 /**
- *  get_op_func - validate type of operations
- *  @s: given operator
- *  Return: Pointer to functions
-*/
+ * get_op_func - function to select operator
+ *
+ * @s: chat type
+ * Return: always successful
+ */
+
 int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
@@ -19,18 +20,10 @@ int (*get_op_func(char *s))(int, int)
 	};
 	int i;
 
-	while (ops[i].op != NULL)
+	i = 0;
+	while (ops[i].op != NULL && strcmp(ops[i].op, s) != 0)
 	{
-		if (strcmp(s, ops[i].op) == 0)
-		{
-			break;
-		}
 		i++;
-	}
-	if (i > 4)
-	{
-		printf("Error\n");
-		exit(99);
 	}
 	return (ops[i].f);
 }
