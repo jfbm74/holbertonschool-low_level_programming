@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	int (*opr)(int, int);
 
 	res = 0;
-	if (argc > 10000)
+	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
