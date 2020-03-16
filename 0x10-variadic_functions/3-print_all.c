@@ -66,7 +66,6 @@ void print_all(const char * const format, ...)
 			{
 				printf("%s", separator);
 				p[j].f(argptr);
-				separator = ", ";
 			}
 			j++;
 		}
