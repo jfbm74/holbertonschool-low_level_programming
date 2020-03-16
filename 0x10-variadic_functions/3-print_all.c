@@ -64,7 +64,6 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == *p[j].fmt)
 			{
-				printf("%s", separator);
 				p[j].f(argptr);
 			}
 			j++;
