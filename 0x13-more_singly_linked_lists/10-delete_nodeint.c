@@ -21,7 +21,10 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	{
 		(*head) = (*head)->next;
 		free(tmp);
-		return (1);
+		if (!tmp)
+			return (1);
+		else
+			return (1);
 	}
 	while (tmp)
 	{
@@ -31,6 +34,10 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 			pivot = pivot->next;
 			tmp->next = pivot->next;
 			free(pivot);
+			if (!pivot)
+				return (1);
+			else
+				return (1);
 		}
 		tmp = tmp->next;
 		i++;
