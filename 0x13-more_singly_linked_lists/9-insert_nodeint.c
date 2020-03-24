@@ -30,10 +30,9 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	{
 		if (i == (idx - 1))
 		{
-			pivot =  tmp;
-			tmp = tmp->next;
-			new->next = tmp->next;
-			pivot->next = new;
+			pivot = tmp->next;
+			new->next = pivot;
+			tmp->next = new;
 			return (new);
 		}
 		tmp = tmp->next;
