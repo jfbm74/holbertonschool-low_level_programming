@@ -1,8 +1,8 @@
 #include "holberton.h"
 /**
- * print_binary - prints binary representation of a num
- * Return: void
- * @n: num
+ * print_binary - prints binary representation of a number
+ * @n: Given number
+ * Return: Nohing
  */
 void print_binary(unsigned long int n)
 {
