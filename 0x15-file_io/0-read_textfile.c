@@ -2,8 +2,8 @@
 
 /**
   * read_textfile - reads a text file and prints iu
-  * @filename: pointer to the file 
-  * @letters: the amount of bytes 
+  * @filename: pointer to the file
+  * @letters: the amount of bytes
   * Return: 0 if failure
   */
 ssize_t read_textfile(const char *filename, size_t letters)
