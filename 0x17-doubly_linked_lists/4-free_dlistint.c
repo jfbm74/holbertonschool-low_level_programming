@@ -16,6 +16,7 @@ void free_dlistint(dlistint_t *head)
 	if (pivot->next ==  NULL)
 	{
 		free(pivot);
+		pivot = NULL;
 	}
 	while (pivot->next !=  NULL)
 	{
@@ -24,4 +25,5 @@ void free_dlistint(dlistint_t *head)
 		pivot = head;
 	}
 	free(head);
+	head = NULL;
 }
