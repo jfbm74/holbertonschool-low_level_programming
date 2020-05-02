@@ -9,21 +9,13 @@ void free_dlistint(dlistint_t *head)
 {
 	dlistint_t *pivot;
 
-	pivot = head;
 	if (head == NULL)
 		return;
 
-	if (pivot->next ==  NULL)
-	{
-		free(pivot);
-		pivot = NULL;
-	}
-	while (pivot->next !=  NULL)
+	while (head->next !=  NULL)
 	{
 		head = head->next;
-		free(pivot);
-		pivot = head;
+		free(head->prev);
 	}
 	free(head);
-	head = NULL;
 }
