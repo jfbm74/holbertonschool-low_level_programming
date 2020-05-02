@@ -26,6 +26,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	current = *h;
 	while (i <= idx)
 	{
+		if (pivot == NULL)
+			return (NULL);
 		pivot = pivot->next;
 		current = current->next;
 		i++;
