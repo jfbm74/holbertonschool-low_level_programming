@@ -15,6 +15,9 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t *new;
 	unsigned int i = 1;
 
+	if (h == NULL || (*h == NULL && idx > 0))
+		return (NULL);
+
 	if (*h == NULL || idx == 0)
 		return (add_dnodeint(h, n));
 	pivot = *h;
