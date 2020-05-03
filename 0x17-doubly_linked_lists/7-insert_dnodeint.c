@@ -13,37 +13,36 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t *pivot;
 	dlistint_t *current;
 	dlistint_t *new;
-	unsigned int i = 1;
+	unsigned int i = 0;
 
 	if (h == NULL || (*h == NULL && idx > 0))
 		return (NULL);
-
-	if (*h == NULL || idx == 0)
-		return (add_dnodeint(h, n));
 	pivot = *h;
 	current = *h;
-	while (i <= idx)
+	while (pivot->next != NULL)
 	{
-		if (pivot == NULL)
-			return (NULL);
+		if (i == idx)
+		{
+			if (pivot->next != NULL && pivot->prev != NULL)
+				break;
+			else if (pivot->prev == NULL)
+				return (add_dnodeint(h, n));
+		}
 		pivot = pivot->next;
-		current = current->next;
 		i++;
+		if (pivot->next == NULL && i == idx)
+			return (add_dnodeint_end(h, n));
 	}
-	/* If idx greater than number of nodes*/
-	if (pivot == NULL)
+	if (pivot->next == NULL && i != idx)
 		return (NULL);
-	/* If is the last node */
-	if (pivot->next == NULL)
-		return (add_dnodeint_end(h, n));
 	new = malloc(sizeof(dlistint_t));
 	if (new == NULL)
 		return (NULL);
 	new->n = n;
-	current = current->prev;
-	new->next = pivot;
-	new->prev = current;
+	current = pivot->prev;
 	current->next = new;
-	pivot->prev = new;
+	pivot->prev = pivot;
+	new->prev = current;
+	new->next = pivot;
 	return (new);
 }
