@@ -17,14 +17,14 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	while (pivot->next != NULL)
 	{
 		if (i == index)
-		{/*nodo intermedio*/
+		{
 			if (pivot->next != NULL && pivot->prev != NULL)
 			{
 				current = pivot->prev;
 				current->next = pivot->next;
 				(pivot->next)->prev = current;
 				break;
-			}/*nodo inicial*/
+			}
 			else if (pivot->prev == NULL)
 			{
 				(*head) = (*head)->next;
@@ -33,7 +33,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 			}
 		}
 		pivot = pivot->next;
-		i++;/*nodo final*/
+		i++;
 		if (pivot->next == NULL && i == index)
 		{
 			current = pivot->prev;
