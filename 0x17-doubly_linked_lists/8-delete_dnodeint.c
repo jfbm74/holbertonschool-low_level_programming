@@ -7,44 +7,40 @@
 */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *pivot, *current;
-	int i = 1;
+	dlistint_t *pivot = NULL;
+	dlistint_t *current = NULL;
+	unsigned int i = 0;
 
-	pivot = *head, current = *head;
-	if (*head == NULL)
+	if (head == NULL || *head == NULL)
 		return (-1);
-	if (index == 0)
+	pivot = *head;
+	while (pivot->next != NULL)
 	{
-		if (pivot->next == NULL)
+		if (i == index)
 		{
-			*head = pivot->next;
-			free(pivot);
-			return (1);
+			if (pivot->next != NULL && pivot->prev != NULL)
+			{
+				current = pivot->prev;
+				current->next = pivot->next;
+				(pivot->next)->prev = current;
+				break;
+			}
+			else if (pivot->prev == NULL)
+			{
+				(*head) = (*head)->next;
+				break;
+			}
 		}
-		pivot = pivot->next, pivot->prev = NULL;
-		free(current), *head = pivot;
-		return (1);
+		pivot = pivot->next;
+		i++;
+		if (pivot->next == NULL && i == index)
+		{
+			current = pivot->prev;
+			current->next = NULL;
+		}
 	}
-	while (i < index)
-	{
-		if (current == NULL)
-			return (-1);
-		pivot = pivot->next, current = current->next, i++;
-	}
-	if (current->next == NULL)
+	if (pivot->next == NULL && i != index)
 		return (-1);
-	pivot = pivot->next;
-	if (pivot->next == NULL)
-	{
-		current->next = NULL;
-		free(pivot);
-		return (1);
-	}
-	else
-	{
-		current->next = pivot->next, current = current->next;
-		current->prev = pivot->prev;
-		free(pivot);
-		return (1);
-	}
+	free(pivot);
+	return (1);
 }
