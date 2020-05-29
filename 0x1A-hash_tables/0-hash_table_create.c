@@ -6,22 +6,22 @@
  */
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	hash_table_t *hashtable = NULL;
+	hash_table_t *ht = NULL;
 
 	if (size == 0)
 		return (NULL);
 
-	hashtable = calloc(1, sizeof(hash_table_t));
-	if (hashtable == NULL)
+	ht = calloc(1, sizeof(hash_table_t));
+	if (ht == NULL)
 		return (NULL);
 
-	hashtable->size = size;
+	ht->size = size;
 
-	hashtable->array = calloc(size, sizeof(hash_node_t *));
-	if (hashtable->array == NULL)
+	ht->array = calloc(size, sizeof(hash_node_t *));
+	if (ht->array == NULL)
 	{
-		free(hashtable);
+		free(ht);
 		return (NULL);
 	}
-	return (hashtable);
+	return (ht);
 }
